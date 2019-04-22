@@ -11,7 +11,11 @@ public class Solution {
      */
     static int simpleArraySum(int[] ar) {
         int sum = 0;
+        if(ar.length <= 0 || ar.length > 1000)
+            return 0;
         for(int i=0; i<ar.length; i++){
+            if(ar[i] <= 0 || ar[i] > 1000)
+                return 0;
             sum += ar[i];
         }
         //System.out.println(sum);
@@ -42,4 +46,3 @@ public class Solution {
         bufferedWriter.close();
     }
 }
-
